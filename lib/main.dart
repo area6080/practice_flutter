@@ -44,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions: [
-          Icon(Icons.beach_access,
+          Icon(
+            Icons.beach_access,
             color: Colors.blue,
           ),
           Icon(Icons.share),
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           color: Colors.greenAccent,
+          height: 400,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
