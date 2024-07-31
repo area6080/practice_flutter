@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const NextPage()),
+                MaterialPageRoute(builder: (context) => const NextPage(name: "RadioCrazy")),
                 // ここにボタンを押した時に呼ばれるコードを書く
             );
           },
