@@ -50,6 +50,14 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+            Text(
+              '住吉大社',
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.lime,
+                fontWeight: FontWeight.bold,
+              ),
+            )
           ],
         ),
       ),
