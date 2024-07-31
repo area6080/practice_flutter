@@ -31,15 +31,26 @@ class MyHomePage extends StatelessWidget {
         title: Text('KBOYのFlutter幼稚園'),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text("次の画面へ"),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const NextPage(name: "RadioCrazy")),
-                // ここにボタンを押した時に呼ばれるコードを書く
-            );
-          },
+        child: Column(
+          children: [
+            Image.asset('images/1.png'),
+            // 画像を使うにはpubspec.yamlへ記述が必要
+            Icon(
+              Icons.star,
+              color: Colors.green,
+              size: 70,
+            ),
+            ElevatedButton(
+              child: Text("次の画面へ"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NextPage(name: "RadioCrazy")),
+                    // ここにボタンを押した時に呼ばれるコードを書く
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
