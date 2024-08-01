@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice/next_page.dart';
 import 'package:practice/third_page.dart';
+import 'package:practice/fourth_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent.shade100),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.lightBlue,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       home: const MyHomePage(),
     );
@@ -70,6 +79,17 @@ class MyHomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ThirdPage(),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text("youtube画面へ"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const FourthPage(),
                   ),
                 );
               },
